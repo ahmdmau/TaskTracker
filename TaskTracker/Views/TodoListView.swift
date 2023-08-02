@@ -20,7 +20,19 @@ struct TodoListView: View {
                                 viewModel.setCompleted(todo, isCompleted: newValue)
                             }))
                             .toggleStyle(CheckboxToggleStyle())
-                            Text(todo.title ?? "-")
+                            
+                            
+                            VStack(alignment: .leading, spacing: 4) {
+                                Text(todo.title ?? "Unknown")
+                                    .fontWeight(.semibold)
+                                Text(todo.todoDescription ?? "Unknown")
+                                    .fontWeight(.regular)
+                                    .font(.system(size: 14))
+                                    .lineLimit(1)
+                                    .truncationMode(.tail)
+                                Text("Due \(DateHelper.shared.formatDateToString(date: todo.dueDate ?? Date()))")
+                                    .font(.footnote)
+                            }
                         }
                     }
                 }
