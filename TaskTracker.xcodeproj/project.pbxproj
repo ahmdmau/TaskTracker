@@ -17,6 +17,8 @@
 		A571F2742A7A7FD80018EA38 /* CheckboxToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A571F2732A7A7FD80018EA38 /* CheckboxToggleStyle.swift */; };
 		A571F2772A7A80C80018EA38 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A571F2762A7A80C80018EA38 /* DateHelper.swift */; };
 		A571F2792A7A81240018EA38 /* DueDateUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A571F2782A7A81240018EA38 /* DueDateUtility.swift */; };
+		A571F27B2A7A82690018EA38 /* AddTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A571F27A2A7A82690018EA38 /* AddTodoView.swift */; };
+		A571F27E2A7A83430018EA38 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A571F27D2A7A83430018EA38 /* View+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		A571F2732A7A7FD80018EA38 /* CheckboxToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxToggleStyle.swift; sourceTree = "<group>"; };
 		A571F2762A7A80C80018EA38 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		A571F2782A7A81240018EA38 /* DueDateUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DueDateUtility.swift; sourceTree = "<group>"; };
+		A571F27A2A7A82690018EA38 /* AddTodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoView.swift; sourceTree = "<group>"; };
+		A571F27D2A7A83430018EA38 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,7 @@
 		A571F2572A7A33040018EA38 /* TaskTracker */ = {
 			isa = PBXGroup;
 			children = (
+				A571F27C2A7A83330018EA38 /* Extensions */,
 				A571F2752A7A80BD0018EA38 /* Helper */,
 				A571F2722A7A7FCC0018EA38 /* Widgets */,
 				A571F26D2A7A34090018EA38 /* Data */,
@@ -87,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				A571F2702A7A7E830018EA38 /* TodoListView.swift */,
+				A571F27A2A7A82690018EA38 /* AddTodoView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -123,6 +129,14 @@
 				A571F2762A7A80C80018EA38 /* DateHelper.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		A571F27C2A7A83330018EA38 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A571F27D2A7A83430018EA38 /* View+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,11 +211,13 @@
 			files = (
 				A571F26F2A7A34140018EA38 /* TodoViewModel.swift in Sources */,
 				A571F2622A7A33060018EA38 /* Persistence.swift in Sources */,
+				A571F27B2A7A82690018EA38 /* AddTodoView.swift in Sources */,
 				A571F2712A7A7E830018EA38 /* TodoListView.swift in Sources */,
 				A571F2592A7A33040018EA38 /* TaskTrackerApp.swift in Sources */,
 				A571F2742A7A7FD80018EA38 /* CheckboxToggleStyle.swift in Sources */,
 				A571F2772A7A80C80018EA38 /* DateHelper.swift in Sources */,
 				A571F2652A7A33060018EA38 /* TaskTracker.xcdatamodeld in Sources */,
+				A571F27E2A7A83430018EA38 /* View+Extensions.swift in Sources */,
 				A571F2792A7A81240018EA38 /* DueDateUtility.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
