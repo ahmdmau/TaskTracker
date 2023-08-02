@@ -15,7 +15,7 @@ struct TodoListView: View {
             VStack {
                 List {
                     ForEach(viewModel.todos, id: \.self) { todo in
-                        HStack {
+                        HStack(alignment: .center, spacing: 8) {
                             Toggle("Mark as complete", isOn: Binding<Bool>(get: { todo.isCompleted }, set: { newValue in
                                 viewModel.setCompleted(todo, isCompleted: newValue)
                             }))
@@ -33,6 +33,17 @@ struct TodoListView: View {
                                 Text("Due \(DateHelper.shared.formatDateToString(date: todo.dueDate ?? Date()))")
                                     .font(.footnote)
                             }
+                            
+                            Spacer()
+                            Text(DueDateUtility.label(for: DueDateUtility.status(for: todo)))
+                                .font(.footnote)
+                                .foregroundColor(DueDateUtility.color(for: DueDateUtility.status(for: todo)))
+                                .padding(.horizontal, 8)
+                                .padding(.vertical, 4)
+                                .frame(minWidth: 62)
+                                .overlay(
+                                    Capsule().stroke(DueDateUtility.color(for: DueDateUtility.status(for: todo)), lineWidth: 0.75)
+                                )
                         }
                     }
                 }
