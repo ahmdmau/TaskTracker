@@ -15,7 +15,13 @@ struct TodoListView: View {
             VStack {
                 List {
                     ForEach(viewModel.todos, id: \.self) { todo in
-                        Text(todo.title ?? "-")
+                        HStack {
+                            Toggle("Mark as complete", isOn: Binding<Bool>(get: { todo.isCompleted }, set: { newValue in
+                                viewModel.setCompleted(todo, isCompleted: newValue)
+                            }))
+                            .toggleStyle(CheckboxToggleStyle())
+                            Text(todo.title ?? "-")
+                        }
                     }
                 }
             }
