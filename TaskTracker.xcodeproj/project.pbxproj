@@ -14,6 +14,7 @@
 		A571F2652A7A33060018EA38 /* TaskTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A571F2632A7A33060018EA38 /* TaskTracker.xcdatamodeld */; };
 		A571F26F2A7A34140018EA38 /* TodoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A571F26E2A7A34140018EA38 /* TodoViewModel.swift */; };
 		A571F2712A7A7E830018EA38 /* TodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A571F2702A7A7E830018EA38 /* TodoListView.swift */; };
+		A571F2742A7A7FD80018EA38 /* CheckboxToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A571F2732A7A7FD80018EA38 /* CheckboxToggleStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		A571F2642A7A33060018EA38 /* TaskTracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TaskTracker.xcdatamodel; sourceTree = "<group>"; };
 		A571F26E2A7A34140018EA38 /* TodoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoViewModel.swift; sourceTree = "<group>"; };
 		A571F2702A7A7E830018EA38 /* TodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListView.swift; sourceTree = "<group>"; };
+		A571F2732A7A7FD80018EA38 /* CheckboxToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxToggleStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 		A571F2572A7A33040018EA38 /* TaskTracker */ = {
 			isa = PBXGroup;
 			children = (
+				A571F2722A7A7FCC0018EA38 /* Widgets */,
 				A571F26D2A7A34090018EA38 /* Data */,
 				A571F26C2A7A34040018EA38 /* ViewModel */,
 				A571F26B2A7A34000018EA38 /* Views */,
@@ -98,6 +101,14 @@
 				A571F2632A7A33060018EA38 /* TaskTracker.xcdatamodeld */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		A571F2722A7A7FCC0018EA38 /* Widgets */ = {
+			isa = PBXGroup;
+			children = (
+				A571F2732A7A7FD80018EA38 /* CheckboxToggleStyle.swift */,
+			);
+			path = Widgets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,6 +185,7 @@
 				A571F2622A7A33060018EA38 /* Persistence.swift in Sources */,
 				A571F2712A7A7E830018EA38 /* TodoListView.swift in Sources */,
 				A571F2592A7A33040018EA38 /* TaskTrackerApp.swift in Sources */,
+				A571F2742A7A7FD80018EA38 /* CheckboxToggleStyle.swift in Sources */,
 				A571F2652A7A33060018EA38 /* TaskTracker.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
