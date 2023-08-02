@@ -8,21 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		A571F2592A7A33040018EA38 /* TaskTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A571F2582A7A33040018EA38 /* TaskTrackerApp.swift */; };
-		A571F25B2A7A33040018EA38 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A571F25A2A7A33040018EA38 /* ContentView.swift */; };
 		A571F25D2A7A33060018EA38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A571F25C2A7A33060018EA38 /* Assets.xcassets */; };
 		A571F2602A7A33060018EA38 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A571F25F2A7A33060018EA38 /* Preview Assets.xcassets */; };
 		A571F2622A7A33060018EA38 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A571F2612A7A33060018EA38 /* Persistence.swift */; };
 		A571F2652A7A33060018EA38 /* TaskTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A571F2632A7A33060018EA38 /* TaskTracker.xcdatamodeld */; };
+		A571F26F2A7A34140018EA38 /* TodoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A571F26E2A7A34140018EA38 /* TodoViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A571F2552A7A33040018EA38 /* TaskTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A571F2582A7A33040018EA38 /* TaskTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTrackerApp.swift; sourceTree = "<group>"; };
-		A571F25A2A7A33040018EA38 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A571F25C2A7A33060018EA38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A571F25F2A7A33060018EA38 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A571F2612A7A33060018EA38 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		A571F2642A7A33060018EA38 /* TaskTracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TaskTracker.xcdatamodel; sourceTree = "<group>"; };
+		A571F26E2A7A34140018EA38 /* TodoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +55,11 @@
 		A571F2572A7A33040018EA38 /* TaskTracker */ = {
 			isa = PBXGroup;
 			children = (
+				A571F26D2A7A34090018EA38 /* Data */,
+				A571F26C2A7A34040018EA38 /* ViewModel */,
+				A571F26B2A7A34000018EA38 /* Views */,
 				A571F2582A7A33040018EA38 /* TaskTrackerApp.swift */,
-				A571F25A2A7A33040018EA38 /* ContentView.swift */,
 				A571F25C2A7A33060018EA38 /* Assets.xcassets */,
-				A571F2612A7A33060018EA38 /* Persistence.swift */,
-				A571F2632A7A33060018EA38 /* TaskTracker.xcdatamodeld */,
 				A571F25E2A7A33060018EA38 /* Preview Content */,
 			);
 			path = TaskTracker;
@@ -71,6 +71,30 @@
 				A571F25F2A7A33060018EA38 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A571F26B2A7A34000018EA38 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A571F26C2A7A34040018EA38 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A571F26E2A7A34140018EA38 /* TodoViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A571F26D2A7A34090018EA38 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				A571F2612A7A33060018EA38 /* Persistence.swift */,
+				A571F2632A7A33060018EA38 /* TaskTracker.xcdatamodeld */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,8 +167,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A571F26F2A7A34140018EA38 /* TodoViewModel.swift in Sources */,
 				A571F2622A7A33060018EA38 /* Persistence.swift in Sources */,
-				A571F25B2A7A33040018EA38 /* ContentView.swift in Sources */,
 				A571F2592A7A33040018EA38 /* TaskTrackerApp.swift in Sources */,
 				A571F2652A7A33060018EA38 /* TaskTracker.xcdatamodeld in Sources */,
 			);
