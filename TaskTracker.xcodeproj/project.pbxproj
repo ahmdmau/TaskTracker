@@ -19,6 +19,7 @@
 		A571F2792A7A81240018EA38 /* DueDateUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A571F2782A7A81240018EA38 /* DueDateUtility.swift */; };
 		A571F27B2A7A82690018EA38 /* AddTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A571F27A2A7A82690018EA38 /* AddTodoView.swift */; };
 		A571F27E2A7A83430018EA38 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A571F27D2A7A83430018EA38 /* View+Extensions.swift */; };
+		A571F2802A7A87910018EA38 /* EditTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A571F27F2A7A87910018EA38 /* EditTodoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		A571F2782A7A81240018EA38 /* DueDateUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DueDateUtility.swift; sourceTree = "<group>"; };
 		A571F27A2A7A82690018EA38 /* AddTodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoView.swift; sourceTree = "<group>"; };
 		A571F27D2A7A83430018EA38 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
+		A571F27F2A7A87910018EA38 /* EditTodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTodoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 			children = (
 				A571F2702A7A7E830018EA38 /* TodoListView.swift */,
 				A571F27A2A7A82690018EA38 /* AddTodoView.swift */,
+				A571F27F2A7A87910018EA38 /* EditTodoView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 				A571F2592A7A33040018EA38 /* TaskTrackerApp.swift in Sources */,
 				A571F2742A7A7FD80018EA38 /* CheckboxToggleStyle.swift in Sources */,
 				A571F2772A7A80C80018EA38 /* DateHelper.swift in Sources */,
+				A571F2802A7A87910018EA38 /* EditTodoView.swift in Sources */,
 				A571F2652A7A33060018EA38 /* TaskTracker.xcdatamodeld in Sources */,
 				A571F27E2A7A83430018EA38 /* View+Extensions.swift in Sources */,
 				A571F2792A7A81240018EA38 /* DueDateUtility.swift in Sources */,

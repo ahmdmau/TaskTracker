@@ -8,24 +8,28 @@
 import SwiftUI
 
 struct TodoListView: View {
+    // MARK: - Properties
     @StateObject private var viewModel = TodoViewModel()
     @State private var showingAddTodo = false
     @State private var animatingButton = false
+    @State private var showingEditTodo = false
+    @State private var selectedTodo: Todo?
     
+    // MARK: - Body
     var body: some View {
         NavigationView {
             ZStack {
                 VStack {
                     List {
                         ForEach(viewModel.todos, id: \.self) { todo in
-                            HStack(alignment: .center, spacing: 8) {
+                            HStack(alignment: .top) {
                                 Toggle("Mark as complete", isOn: Binding<Bool>(get: { todo.isCompleted }, set: { newValue in
                                     viewModel.setCompleted(todo, isCompleted: newValue)
                                 }))
                                 .toggleStyle(CheckboxToggleStyle())
                                 
-                                
                                 VStack(alignment: .leading, spacing: 4) {
+                                    
                                     Text(todo.title ?? "Unknown")
                                         .fontWeight(.semibold)
                                     Text(todo.todoDescription ?? "Unknown")
@@ -36,7 +40,6 @@ struct TodoListView: View {
                                     Text("Due \(DateHelper.shared.formatDateToString(date: todo.dueDate ?? Date()))")
                                         .font(.footnote)
                                 }
-                                
                                 Spacer()
                                 Text(DueDateUtility.label(for: DueDateUtility.status(for: todo)))
                                     .font(.footnote)
@@ -47,9 +50,17 @@ struct TodoListView: View {
                                     .overlay(
                                         Capsule().stroke(DueDateUtility.color(for: DueDateUtility.status(for: todo)), lineWidth: 0.75)
                                     )
+                            }.onTapGesture {
+                                selectedTodo = todo
+                                showingEditTodo = true
                             }
                         }
+                        .onDelete { indexSet in
+                            let todo = viewModel.todos[indexSet.first!]
+                            viewModel.deleteTodo(todo)
+                        }
                     }
+                    .animation(.default)
                 }
             }
             .navigationTitle("Task Tracker")
@@ -60,8 +71,11 @@ struct TodoListView: View {
             .sheet(isPresented: $showingAddTodo) {
                 AddTodoView(viewModel: viewModel)
             }
-        }
-        .alert(isPresented: $viewModel.showErrorAlert) {
+            .sheet(isPresented: $showingEditTodo) {
+                EditTodoView(viewModel: viewModel, todo: $selectedTodo)
+            }
+            
+        }.alert(isPresented: $viewModel.showErrorAlert) {
             Alert(title: Text("Error"), message: Text(viewModel.errorMessage), dismissButton: .default(Text("OK")))
         }.overlay(
             ZStack {
