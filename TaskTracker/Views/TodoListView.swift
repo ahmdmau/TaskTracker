@@ -62,6 +62,9 @@ struct TodoListView: View {
                     }
                     .animation(.default)
                 }
+                if viewModel.todos.count == 0 {
+                    EmptyStateView()
+                }
             }
             .navigationTitle("Task Tracker")
             .navigationBarTitleDisplayMode(.inline)
